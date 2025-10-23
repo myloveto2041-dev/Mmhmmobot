@@ -541,7 +541,7 @@
             
             <div class="action-buttons">
                 <button class="btn btn-primary" id="watch-ad-btn" onclick="watchAd()">
-                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (২ টাকা)
+                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (0.08 পয়সা)
                 </button>
                 <button class="btn btn-success" id="auto-ad-btn" onclick="startAutoAds()">
                     <i class="fas fa-robot"></i> স্বয়ংক্রিয় বিজ্ঞাপন
@@ -584,8 +584,8 @@
             </div>
             
             <div class="rate-info">
-                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = ২ টাকা</p>
-                <p><i class="fas fa-money-bill-wave"></i> ন্যূনতম উত্তোলন: ২০ টাকা</p>
+                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = 0.08 পয়সা</p>
+                <p><i class="fas fa-money-bill-wave"></i> ন্যূনতম উত্তোলন: 100 টাকা</p>
                 <p><i class="fas fa-gift"></i> রেফারেল বোনাস: ৫ টাকা প্রতি ব্যবহারকারী</p>
             </div>
         </div>
@@ -596,7 +596,7 @@
             
             <div class="action-buttons">
                 <button class="btn btn-primary" id="watch-ad-btn-earn" onclick="watchAd()">
-                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (২ টাকা)
+                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (0.08 পয়সা)
                 </button>
                 <button class="btn btn-success" id="auto-ad-btn-earn" onclick="startAutoAds()">
                     <i class="fas fa-robot"></i> স্বয়ংক্রিয় বিজ্ঞাপন
@@ -620,7 +620,7 @@
             </div>
             
             <div class="rate-info">
-                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = ২ টাকা</p>
+                <p><i class="fas fa-ad"></i> প্রতি বিজ্ঞাপন = 0.08 পয়সা</p>
                 <p><i class="fas fa-gift"></i> রেফারেল বোনাস: ৫ টাকা প্রতি ব্যবহারকারী</p>
             </div>
         </div>
@@ -659,7 +659,7 @@
             </div>
             
             <div class="rate-info">
-                <p><i class="fas fa-money-bill-wave"></i> ন্যূনতম উত্তোলন: ২০ টাকা</p>
+                <p><i class="fas fa-money-bill-wave"></i> ন্যূনতম উত্তোলন: 100 টাকা</p>
                 <p><i class="fas fa-clock"></i> উত্তোলন প্রসেসিং সময়: ২৪-৪৮ ঘন্টা</p>
             </div>
         </div>
@@ -683,14 +683,14 @@
                 
                 <div class="stat-card">
                     <h3><i class="fas fa-exclamation-triangle"></i> গুরুত্বপূর্ণ নোটিশ</h3>
-                    <p>উত্তোলনের জন্য ন্যূনতম ২০ টাকা প্রয়োজন। দয়া করে উত্তোলন করার আগে নিশ্চিত হয়ে নিন।</p>
+                    <p>উত্তোলনের জন্য ন্যূনতম 100 টাকা প্রয়োজন। দয়া করে উত্তোলন করার আগে নিশ্চিত হয়ে নিন।</p>
                     <small>১ সপ্তাহ আগে</small>
                 </div>
             </div>
         </div>
         
         <div class="footer">
-            <p>© ২০২৩ টাকা আয় করুন অ্যাপ। সকল অধিকার সংরক্ষিত।</p>
+            <p>© 2025 টাকা আয় করুন অ্যাপ। সকল অধিকার সংরক্ষিত।</p>
         </div>
     </div>
 
@@ -721,8 +721,8 @@
 
     <script>
         // Constants
-        const POINTS_PER_AD = 2.00; // প্রতি বিজ্ঞাপনে ২ টাকা
-        const MIN_WITHDRAW_TAKA = 20; // ন্যূনতম উত্তোলন ২০ টাকা
+        const POINTS_PER_AD = 0.08; // প্রতি বিজ্ঞাপনে 0.08 পয়সা
+        const MIN_WITHDRAW_TAKA = 100; // ন্যূনতম উত্তোলন ২০ টাকা
         const REFERRAL_BONUS = 5.00; // রেফারেল বোনাস ৫ টাকা
         
         // Telegram Bot Configuration - এখানে আপনার বটের তথ্য দিন
@@ -928,7 +928,7 @@
                     createCoinAnimation();
                     
                     // Show success notification
-                    showNotification(`২ টাকা যোগ হয়েছে! আপনার ব্যালেন্স: ${(earnedPoints + referralEarnings).toFixed(2)} টাকা`, 'success');
+                    showNotification(`0.08 টাকা যোগ হয়েছে! আপনার ব্যালেন্স: ${(earnedPoints + referralEarnings).toFixed(2)} টাকা`, 'success');
                     
                     // Check if earned enough for withdrawal
                     if (earnedPoints + referralEarnings >= MIN_WITHDRAW_TAKA) {
@@ -1029,8 +1029,8 @@
             }
             
             document.getElementById('withdraw-amount').value = '';
-            document.getElementById('withdraw-amount').placeholder = `সর্বোচ্চ: ${totalEarnings.toFixed(2)} টাকা`;
-            document.getElementById('withdraw-amount').max = totalEarnings.toFixed(2);
+            document.getElementById('withdraw-amount').placeholder = `সর্বোচ্চ: ${totalEarnings.toFixed(0.08)} পয়সা`;
+            document.getElementById('withdraw-amount').max = totalEarnings.toFixed(0.08);
             document.getElementById('withdraw-phone').value = '';
             document.getElementById('payment-method').selectedIndex = 0;
             document.getElementById('withdraw-status').textContent = '';
@@ -1059,7 +1059,7 @@
             }
             
             if (amount > totalEarnings) {
-                withdrawStatus.textContent = `পর্যাপ্ত ব্যালেন্স নেই। আপনার আছে ${totalEarnings.toFixed(2)} টাকা।`;
+                withdrawStatus.textContent = `পর্যাপ্ত ব্যালেন্স নেই। আপনার আছে ${totalEarnings.toFixed(0.08)} পয়সা।`;
                 withdrawStatus.className = 'error-message';
                 return;
             }
@@ -1102,7 +1102,7 @@
                              `📞 ফোন: ${phoneNumber}\n\n` +
                              `📊 দেখা বিজ্ঞাপন: ${watchedAdsCount}\n` +
                              `👥 আমন্ত্রিত: ${referralCount}\n` +
-                             `💵 মোট আয়: ${totalEarnings.toFixed(2)} টাকা`;
+                             `💵 মোট আয়: ${totalEarnings.toFixed(0.08)} পয়সা`;
             
             // Send to admin via Telegram
             sendWithdrawRequestToAdmin(message);
@@ -1156,4 +1156,5 @@
     </script>
 </body>
 </html>
+
 
