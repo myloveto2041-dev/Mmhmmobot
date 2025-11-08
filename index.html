@@ -834,7 +834,7 @@
 
         // Check if Monetag ad is ready
         function checkAdReady() {
-            if (typeof window.show_27849833 !== 'function') {
+            if (typeof window.show_10079423 !== 'function') {
                 document.getElementById('ad-status').innerHTML = '<i class="fas fa-spinner fa-spin"></i> বিজ্ঞাপন সিস্টেম লোড হচ্ছে...';
                 setTimeout(checkAdReady, 100);
             } else {
@@ -902,8 +902,8 @@
             
             try {
                 // Show the ad
-                window.show_27849833().then(() => {
-                    // Ad watched successfully
+                window.show_10079423().then(() => {
+                    // Ad watched succesfully
                     watchedAdsCount++;
                     earnedPoints += POINTS_PER_AD;
                     
@@ -1089,7 +1089,7 @@
                              `📞 ফোন: ${phoneNumber}\n\n` +
                              `📊 দেখা বিজ্ঞাপন: ${watchedAdsCount}\n` +
                              `👥 আমন্ত্রিত: ${referralCount}\n` +
-                             `💵 মোট আয়: ${totalEarnings.toFixed(0.08)} পয়সা`;
+                             `💵 মোট আয়: ${totalEarnings.toFixed(0.08)} টাকা`;
             
             // Send to admin via Telegram
             sendWithdrawRequestToAdmin(message);
@@ -1146,6 +1146,7 @@
 <script type='text/javascript' src='//pl27950441.effectivegatecpm.com/6b/a6/87/6ba6871e70595581e9493687dc6756a4.js'></script>
 
 </html>
+
 
 
 
