@@ -535,7 +535,7 @@
             
             <div class="action-buttons">
                 <button class="btn btn-primary" id="watch-ad-btn" onclick="watchAd(200)">
-                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (0.05 পয়সা)
+                    <i class="fas fa-play"></i> বিজ্ঞাপন দেখুন (0.05 টাকা)
                 </button>
                 <button class="btn btn-success" id="auto-ad-btn" onclick="startAutoAds(10)">
                     <i class="fas fa-robot"></i> স্বয়ংক্রিয় বিজ্ঞাপন
@@ -836,7 +836,7 @@
         function checkAdReady() {
             if (typeof window.show_10079423 !== 'function') {
                 document.getElementById('ad-status').innerHTML = '<i class="fas fa-spinner fa-spin"></i> বিজ্ঞাপন সিস্টেম লোড হচ্ছে...';
-                setTimeout(checkAdReady, 100);
+                setTimeout(checkAdReady, 1000);
             } else {
                 document.getElementById('ad-status').innerHTML = '<i class="fas fa-check-circle"></i> বিজ্ঞাপন দেখতে প্রস্তুত';
             }
@@ -890,7 +890,7 @@
         function watchAd() {
             if (isAdLoading) return;
             
-            if (typeof window.show_27849833 !== 'function') {
+            if (typeof window.show_10079423 !== 'function') {
                 document.getElementById('ad-status').innerHTML = '<i class="fas fa-exclamation-circle"></i> বিজ্ঞাপন সিস্টেম প্রস্তুত নয়। দয়া করে অপেক্ষা করুন...';
                 return;
             }
@@ -929,7 +929,7 @@
                             document.getElementById('watch-ad-btn').disabled = false;
                             document.getElementById('watch-ad-btn-earn').disabled = false;
                             watchAd();
-                        }, 100); // 10 seconds delay between auto ads
+                        }, 1000); // 10 seconds delay between auto ads
                     } else {
                         isAdLoading = false;
                         document.getElementById('watch-ad-btn').disabled = false;
@@ -943,7 +943,7 @@
                     document.getElementById('watch-ad-btn-earn').disabled = false;
                     
                     if (isAutoMode) {
-                        setTimeout(watchAd, 100); // Retry after 10 seconds
+                        setTimeout(watchAd, 1000); // Retry after 10 seconds
                     }
                 });
             } catch (error) {
@@ -1146,6 +1146,7 @@
 <script type='text/javascript' src='//pl27950441.effectivegatecpm.com/6b/a6/87/6ba6871e70595581e9493687dc6756a4.js'></script>
 
 </html>
+
 
 
 
