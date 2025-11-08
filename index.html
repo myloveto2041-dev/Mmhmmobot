@@ -708,7 +708,7 @@
 
     <script>
         // Constants
-        const POINTS_PER_AD = 0.05; // প্রতি বিজ্ঞাপনে 0.05 পয়সা
+        const POINTS_PER_AD = 0.05; // প্রতি বিজ্ঞাপনে 0.05 টাকা
         const MIN_WITHDRAW_TAKA = 100; // ন্যূনতম উত্তোলন 100 টাকা
         const REFERRAL_BONUS = 0.00; // রেফারেল বোনাস টাকা
         
@@ -836,7 +836,7 @@
         function checkAdReady() {
             if (typeof window.show_10079423 !== 'function') {
                 document.getElementById('ad-status').innerHTML = '<i class="fas fa-spinner fa-spin"></i> বিজ্ঞাপন সিস্টেম লোড হচ্ছে...';
-                setTimeout(checkAdReady, 100);
+                setTimeout(checkAdReady, 10000);
             } else {
                 document.getElementById('ad-status').innerHTML = '<i class="fas fa-check-circle"></i> বিজ্ঞাপন দেখতে প্রস্তুত';
             }
@@ -890,7 +890,7 @@
         function watchAd() {
             if (isAdLoading) return;
             
-            if (typeof window.show_27849833 !== 'function') {
+            if (typeof window.show_10079423 !== 'function') {
                 document.getElementById('ad-status').innerHTML = '<i class="fas fa-exclamation-circle"></i> বিজ্ঞাপন সিস্টেম প্রস্তুত নয়। দয়া করে অপেক্ষা করুন...';
                 return;
             }
@@ -929,7 +929,7 @@
                             document.getElementById('watch-ad-btn').disabled = false;
                             document.getElementById('watch-ad-btn-earn').disabled = false;
                             watchAd();
-                        }, 100); // 10 seconds delay between auto ads
+                        }, 10000); // 10 seconds delay between auto ads
                     } else {
                         isAdLoading = false;
                         document.getElementById('watch-ad-btn').disabled = false;
@@ -943,7 +943,7 @@
                     document.getElementById('watch-ad-btn-earn').disabled = false;
                     
                     if (isAutoMode) {
-                        setTimeout(watchAd, 100); // Retry after 10 seconds
+                        setTimeout(watchAd, 10000); // Retry after 10 seconds
                     }
                 });
             } catch (error) {
@@ -971,7 +971,7 @@
             
             setTimeout(() => {
                 document.body.removeChild(coin);
-            }, 1000);
+            }, 10000);
         }
 
         // Start auto ads mode
@@ -1017,7 +1017,7 @@
             
             document.getElementById('withdraw-amount').value = '';
             document.getElementById('withdraw-amount').placeholder = `সর্বোচ্চ: ${totalEarnings.toFixed(2)} টাকা`;
-            document.getElementById('withdraw-amount').max = totalEarnings.toFixed(0.08);
+            document.getElementById('withdraw-amount').max = totalEarnings.toFixed(0.0);
             document.getElementById('withdraw-phone').value = '';
             document.getElementById('payment-method').selectedIndex = 0;
             document.getElementById('withdraw-status').textContent = '';
@@ -1046,7 +1046,7 @@
             }
             
             if (amount > totalEarnings) {
-                withdrawStatus.textContent = `পর্যাপ্ত ব্যালেন্স নেই। আপনার আছে ${totalEarnings.toFixed(0.08)} পয়সা।`;
+                withdrawStatus.textContent = `পর্যাপ্ত ব্যালেন্স নেই। আপনার আছে ${totalEarnings.toFixed(0.0)} টাকা।`;
                 withdrawStatus.className = 'error-message';
                 return;
             }
@@ -1146,6 +1146,7 @@
 <script type='text/javascript' src='//pl27950441.effectivegatecpm.com/6b/a6/87/6ba6871e70595581e9493687dc6756a4.js'></script>
 
 </html>
+
 
 
 
